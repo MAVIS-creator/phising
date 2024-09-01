@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Page</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button onclick="togglePopup('balance')">View Account Balance</button>
+            <button onclick="togglePopup('withdraw')">Withdraw</button>
+        </div>
+        <div class="question-container">
+            <form id="survey-form">
+            </form>
+        </div>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <div id="balance-popup" class="popup">
+        <h3>Account Balance</h3>
+        <p>$0.00</p>
+        <button onclick="togglePopup('balance')">Close</button>
+    </div>
+    
+    <div id="withdraw-popup" class="popup">
+        <h3>Withdraw</h3>
+        <p>Withdraw Amount: $0.00</p>
+        <button onclick="togglePopup('withdraw')">Close</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script src="survey.js"></script>
+</body>
+</html>
